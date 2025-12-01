@@ -11,7 +11,8 @@ class Bebida {
         float iva;
         float descuento;
         string tipo;
-        string marca;   
+        string marca;
+        string pais;   
     
 }
 
