@@ -14,6 +14,10 @@ void Cliente::setEdad(int age){
     edad = age;
 }
 
+void Cliente::pedirBebida(Licoreria& local, int num_bebida, int cantidad){
+//terminar cuando haya tiempo
+}
+
 void Cliente::beberShot(int cantidad){
     if (cantidad <=0){
         cout << "mi loco, tomate algo, no llevas nada" << endl;

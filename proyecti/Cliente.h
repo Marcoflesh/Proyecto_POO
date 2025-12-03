@@ -1,6 +1,7 @@
 #ifndef CLIENTE_H
 #define CLIENTE_H
 #include <string>
+#include "Licoreria.h"
 using namespace std;
 
 class Cliente{
@@ -23,6 +24,7 @@ public:
     void setNombre(string name);
     void setEdad(int age);
 
+    void pedirBebida(Licoreria& local, int num_bebida, int cantidad);
     void beberShot(int cantidad);
     void mostrarInfo();
 };
