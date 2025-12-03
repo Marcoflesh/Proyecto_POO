@@ -11,7 +11,7 @@ Whiskey::Whiskey(float _porcentaje, float _precio, float _descuento,
 void Whiskey::setYearsAged(int years){
     yearsAged = years;
 }
-void Whiskey::setBarrica(const string barrel){
+void Whiskey::setBarrica(string barrel){
     barrica = barrel;
 }
 void Whiskey::servir(){
@@ -25,11 +25,14 @@ string Whiskey::toString(){
         + to_string(yearsAged) + "\nTipo de barrica: " + barrica;
     return texto;
 }
-void Whiskey::descontar(){
+void Whiskey::descontar(int cantidad){
     if (yearsAged > 20){
+        float total;
         cout << "Este whiskey es especial por ende no hay descuentos" << endl;
+        total = precio * cantidad;
+        cout << "Total $" << total << endl;
     }
     else{
-        Bebida::descontar();
+        Bebida::descontar(cantidad);
     }
 }

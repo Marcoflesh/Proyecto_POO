@@ -47,9 +47,11 @@ string Ron::toString() {
 void Ron::descontar(int cantidad){
     
     if (estilo == "Añejo" || estilo == "Gran Reserva"){
-        cout << "Este ron " << categoria << "Al ser premium no"
+        float total;
+        total = precio * cantidad;
+        cout << "Este ron " << estilo << "Al ser premium no"
         << "aplica descuentos" << endl;
-        cout << "Tienes que pagar " << (precio * cantidad) << endl;
+        cout << "Tienes que pagar $" << total << endl;
     }
     else {
         Bebida::descontar(cantidad);

@@ -27,7 +27,7 @@ public:
 
     void servir() override;
     string toString() override;
-    void descontar() override;
+    void descontar(int) override;
 };
 
 #endif

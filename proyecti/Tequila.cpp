@@ -33,7 +33,7 @@ string Tequila::toString(){
     string texto, pureza;
 
     pureza = agave ? "100'%' agave" : "mixto"; 
-    texto = Bebida::toString() + "Region: " + region 
+    texto = Bebida::toString() + "\nRegion: " + region 
         + "\nCategoria: " + categoria + "\nHecho 100'%' de agave: " 
         + pureza;
     return texto;
@@ -41,15 +41,21 @@ string Tequila::toString(){
 
 void Tequila::descontar(int cantidad){
     if (agave){
+        float total;
         cout << "no habrá descuento porque es 100'%' de agave" << endl;
+        total = precio * cantidad;
+        cout << "Total: $" << total << endl;
     }
     else{
         if (cantidad > 7){
             Bebida::descontar(cantidad);
         }
         else{
+            float total;
             cout << "Debes tomar más de 7 caballitos para que se te haga"
             << "un descuento" << endl;
+            total = precio * cantidad;
+            cout << "Total: $" << total << endl;
         }
     }
 }

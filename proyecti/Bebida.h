@@ -1,5 +1,5 @@
-#define BEBIDA_H
 #ifndef BEBIDA_H
+#define BEBIDA_H
 #include <string>
 using namespace std;
 
@@ -15,7 +15,7 @@ protected:
 
 public:
     Bebida(float _porcentaje, float _precio, float _descuento, 
-        const string& marca, const string& pais, const string& _nombre);
+        const string& _marca, const string& _pais, const string& _nombre);
 
     virtual ~Bebida(){}
 
@@ -34,11 +34,12 @@ public:
     void setPais(string country);
 
     virtual void descontar();
-    virtual void descontar(float condicional);
+    virtual void descontar(float total);
     virtual void descontar(int cantidad);
 
     virtual void servir() = 0;
 
     virtual string toString();
 };
-#endif 
+
+#endif

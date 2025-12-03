@@ -24,23 +24,16 @@ string Cerveza::toString(){
     return texto;
 }
 void Cerveza::descontar(int cantidad){
-    descuento = 0.0;
     if (cantidad < 5){
         cout << "chin!, no llegaste al descuento chaval..." << endl;
-        Bebida::descontar(descuento);
+        float descuento = 0.0;
+        Bebida::descontar(cantidad);
     }
     else{
-        float total, descuento_nuevo, descontado, pago_total;
         cout << "Venga chavaaaaaaal tomaste " << cantidad 
-        << "te ganaste un 20'%' de descuento " << endl;
-        descuento_nuevo = descuento + 0.20;
-        total = precio * cantidad;
-        descontado = total * descuento_nuevo;
-        pago_total = total - descontado;
-        cout << "el precio por cerveza es: $" << precio << endl;
-        cout << "el total por las " << cantidad << " cervezas es: $" 
-        << total << endl;
-        cout << "con el " << (descuento_nuevo * 100) 
-        << "'%' \nTOTAL A PAGAR: $" << pago_total << endl;
+            << " te ganaste un 20'%' de descuento " << endl;
+
+        descuento = 0.20;                // porcentaje especial
+        Bebida::descontar(cantidad);     // usa el método del total
     }
 }

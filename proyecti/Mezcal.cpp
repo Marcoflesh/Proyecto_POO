@@ -36,22 +36,22 @@ string Mezcal::toString(){
 void Mezcal::descontar(int cantidad){
     if (tipoAgave == "Tabala" || tipoAgave == "Tepeztate" 
         || tipoAgave == "Jabali"){
+            float total;
             cout << "el agave de este mezcal es escaso" 
             << "y dificil de conseguir" << endl;
             cout << "No aplican descuentos por ende pagas completo" << endl;
+            total = precio * cantidad;
+            cout << "Total: $" << total << endl;
         }
     else{
         if (cantidad > 7){
-            float total, checkout;
+            float descuento = 0.15;
             cout << "se aplica descuento del 15%" << endl;
-            total = precio * cantidad;
-            checkout = total - (total * 0.15f);
-            cout << "tu cuenta es de: $ " << total << endl;
-            cout << "pero con un 15'%' de descuento te queda en $" << pago 
-            << endl;
-            else{
-                Bebida::descontar(cantidad);
+            Bebida::descontar(cantidad);
+        }
+        else{
+            Bebida::descontar(cantidad);
             } 
         }
     }
-}
+

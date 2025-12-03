@@ -29,22 +29,28 @@ void Bebida::setPais(string country){
 }
 
 void Bebida::descontar(){
-    float restante;
+    float descontado, nuevo;
     descontado = precio * descuento;
-    precio -= descontado;
-    cout << "se aplicó un descuento a " << nombre << "del " 
-    << (descuento * 100) << "%, el nuevo precio es: $" << precio << endl;
+    nuevo = precio - descontado;
+    cout << "se aplicó un descuento a " << nombre << " del " 
+    << (descuento * 100) << "%, el nuevo precio es: $" << nuevo << endl;
 }
 
-void Bebida::descontar(float condicional){
-    descuento = condicional;
-    descontar();
+void Bebida::descontar(float total){
+    float descontado, pago;
+    descontado = total * descuento;
+    pago = total - descontado;
+    cout << "total sin descuento: $" << total << endl;
+    cout << "Total a pagar con descuento: $" << pago << endl;
 }
 
 void Bebida::descontar(int cantidad){
     if (cantidad > 0){
-        precio = precio * cantidad;
-        descontar();
+        float total;
+        total = precio * cantidad;
+        cout << "tomaste: " << cantidad << " de " << nombre 
+        << endl;
+        descontar(total);
     }
     else{
         cout << "mmmmm toma no?" << endl;
@@ -55,7 +61,7 @@ string Bebida::toString(){
     string texto;
 
     texto = "Bebida: " + nombre + "\nMarca: " + marca + "\nPais: " + pais
-        + "\nPorcentaje de alcohol: " + porcentaje + "\nPrecio: $" 
+        + "\nPorcentaje de alcohol: " + to_string(porcentaje) + "\nPrecio: $" 
         + to_string(precio) + "\nCon descuento queda: " 
         + to_string(descuento);
     return texto;
