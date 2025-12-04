@@ -10,7 +10,7 @@ private:
     int yearCosecha;
 
 public:
-    Vino(float _porcentaje, float _precio, float _descuento, 
+    Vino(int _stock, float _porcentaje, float _precio, float _descuento, 
         const string& _marca, const string& _pais, const string& _nombre,
         const string& _uva, int _yearCosecha);
     

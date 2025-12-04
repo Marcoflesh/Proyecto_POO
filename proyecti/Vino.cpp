@@ -3,11 +3,11 @@
 #include "Vino.h"
 using namespace std;
 
-Vino::Vino(float _porcentaje, float _precio, float _descuento, 
+Vino::Vino(int _stock, float _porcentaje, float _precio, float _descuento, 
     const string& _marca, const string& _pais, const string& _nombre,
     const string& _uva, int _yearCosecha) 
-    : Bebida(_porcentaje, _precio, _descuento, _marca, _pais, _nombre), 
-    uva(_uva), yearCosecha(_yearCosecha) {}
+    : Bebida(_stock, _porcentaje, _precio, _descuento, _marca, 
+        _pais, _nombre), uva(_uva), yearCosecha(_yearCosecha) {}
 
 void Vino::setUva(string grape){
     uva = grape;

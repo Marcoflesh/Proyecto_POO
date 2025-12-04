@@ -2,6 +2,7 @@
 #define CLIENTE_H
 #include <string>
 #include "Licoreria.h"
+
 using namespace std;
 
 class Cliente{
@@ -12,8 +13,7 @@ private:
     int shots;
 
 public:
-    Cliente(const string& _nombre, int _edad) 
-        : nombre(_nombre), edad(_edad) {}
+    Cliente(const string& _nombre, int _edad);
     
     virtual ~Cliente(){}
 

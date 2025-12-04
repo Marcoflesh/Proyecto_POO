@@ -22,6 +22,8 @@ int getBebidasQty(){return inventario.size(); }
 void setNombre(string name);
 
 void agregarBebida(Bebida* bebida);
+void agregarStock(int num_bebida, int cantidad);
+void quitarBebida(int num_bebida);
 void mostrarInventario();
 void servirBebida(int num_bebida);
 void cobrar(int num_bebida, int cantidad);

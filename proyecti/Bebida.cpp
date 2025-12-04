@@ -4,10 +4,14 @@
 
 using namespace std;
 
-Bebida::Bebida(float _porcentaje, float _precio, float _descuento, 
+Bebida::Bebida(int _stock, float _porcentaje, float _precio, float _descuento, 
     const string& _marca, const string& _pais, const string& _nombre) 
-    : porcentaje(_porcentaje), precio(_precio), descuento(_descuento), 
-    marca(_marca), pais(_pais), nombre(_nombre) {}
+    : stock(_stock), porcentaje(_porcentaje), precio(_precio), 
+    descuento(_descuento), marca(_marca), pais(_pais), nombre(_nombre) {}
+
+void Bebida::setStock(int inventario){
+    stock = inventario;
+}
 
 void Bebida::setGrados(float percentage){
     porcentaje = percentage;
@@ -26,6 +30,14 @@ void Bebida::setMarca(string brand){
 }
 void Bebida::setPais(string country){
     pais = country;
+}
+
+void Bebida::sumarStock(int cantidad){
+    stock += cantidad;
+}
+
+void Bebida::restarStock(int loot) {
+    stock -= loot;
 }
 
 void Bebida::descontar(){

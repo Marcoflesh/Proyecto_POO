@@ -11,7 +11,7 @@ private:
     int destilaciones;
 
 public:
-    Vodka(float _porcentaje, float _precio, float _descuento, 
+    Vodka(int _stock, float _porcentaje, float _precio, float _descuento, 
         const string& _marca, const string& _pais, const string& _nombre,
         const string& _sabor, int _destilaciones);
     

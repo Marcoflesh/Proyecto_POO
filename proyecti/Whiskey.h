@@ -11,7 +11,7 @@ private:
     string barrica;
 
 public:
-    Whiskey(float _porcentaje, float _precio, float _descuento, 
+    Whiskey(int _stock, float _porcentaje, float _precio, float _descuento, 
         const string& _marca, const string& _pais, const string& _nombre,
         int _yearsAged, const string& _barrica);
     

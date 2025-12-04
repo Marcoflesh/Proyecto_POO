@@ -3,10 +3,11 @@
 #include <string>
 using namespace std;
 
-Mezcal::Mezcal(float _porcentaje, float _precio, float _descuento, 
+Mezcal::Mezcal(int _stock, float _porcentaje, float _precio, float _descuento, 
     const string& _marca, const string& _pais, const string& _nombre,
     const string& _tipoAgave, bool _gusano) 
-    : Bebida(_porcentaje, _precio, _descuento, _marca, _pais, _nombre), 
+    : Bebida(_stock, _porcentaje, _precio, _descuento, 
+        _marca, _pais, _nombre), 
     tipoAgave(_tipoAgave), gusano(_gusano) {}
 
 void Mezcal::setTipoAgave(string agave){
@@ -34,19 +35,20 @@ string Mezcal::toString(){
 }
 
 void Mezcal::descontar(int cantidad){
+    float total;
+    total = precio * cantidad;
+
     if (tipoAgave == "Tabala" || tipoAgave == "Tepeztate" 
         || tipoAgave == "Jabali"){
-            float total;
             cout << "el agave de este mezcal es escaso" 
             << "y dificil de conseguir" << endl;
             cout << "No aplican descuentos por ende pagas completo" << endl;
-            total = precio * cantidad;
             cout << "Total: $" << total << endl;
         }
     else{
         if (cantidad > 7){
-            float descuento = 0.15;
             cout << "se aplica descuento del 15%" << endl;
+            float descuento = 0.15;
             Bebida::descontar(cantidad);
         }
         else{

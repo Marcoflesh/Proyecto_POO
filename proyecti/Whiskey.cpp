@@ -2,9 +2,10 @@
 #include "Whiskey.h"
 using namespace std;
 
-Whiskey::Whiskey(float _porcentaje, float _precio, float _descuento, 
-    const string& _marca, const string& _pais, const string& _nombre,
-    int _yearsAged, const string& _barrica) : Bebida(_porcentaje, _precio, 
+Whiskey::Whiskey(int _stock, float _porcentaje, 
+    float _precio, float _descuento, const string& _marca, 
+    const string& _pais, const string& _nombre, int _yearsAged, 
+    const string& _barrica) : Bebida(_stock, _porcentaje, _precio, 
         _descuento, _marca, _pais, _nombre), yearsAged(_yearsAged), 
         barrica(_barrica) {}
 
@@ -14,6 +15,7 @@ void Whiskey::setYearsAged(int years){
 void Whiskey::setBarrica(string barrel){
     barrica = barrel;
 }
+
 void Whiskey::servir(){
     cout << "Sirviendo un buen whiskey de " << yearsAged 
     << " años de añejamiento de una barrica " << barrica << endl;

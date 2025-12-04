@@ -2,10 +2,10 @@
 #include "Ron.h"
 using namespace std;
 
-Ron::Ron(float _porcentaje, float _precio, float _descuento, 
+Ron::Ron(int _stock, float _porcentaje, float _precio, float _descuento, 
     const string& _marca, const string& _pais, const string& _nombre,
-    const string& _estilo, bool _especias) : Bebida(_porcentaje, _precio, 
-        _descuento, _marca, _pais, _nombre), 
+    const string& _estilo, bool _especias) : Bebida(_stock, _porcentaje, 
+        _precio, _descuento, _marca, _pais, _nombre), 
         estilo(_estilo), especias(_especias) {}
 
 void Ron::setEstilo(string style){
@@ -16,7 +16,7 @@ void Ron::setEspecias(bool spices){
 }
 
 void Ron::servir(){
-    cout << "Aqui tienes un buen " << nombre << estilo << endl;
+    cout << "Aqui tienes un buen " << nombre << " " << estilo << endl;
     
     if (especias){
         cout << "Te recomiendo tomartelo en cubas" << endl;
@@ -25,7 +25,7 @@ void Ron::servir(){
         if (estilo == "Blanco"){
             cout << "Te recomiendo tomartelo en mojitos" << endl;
         }
-        else if (estilo == "Añejado" || estilo == "Gran Reserva"){
+        else if (estilo == "Añejo" || estilo == "Gran Reserva"){
             cout << "Te recomiendo tomartelo con hielo y ya" << endl;
         }
         else {

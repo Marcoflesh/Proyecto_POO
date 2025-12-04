@@ -11,7 +11,7 @@ private:
     bool especias;
 
 public:
-    Ron(float _porcentaje, float _precio, float _descuento, 
+    Ron(int _stock, float _porcentaje, float _precio, float _descuento, 
         const string& _marca, const string& _pais, const string& _nombre,
         const string& _estilo, bool _especias);
 

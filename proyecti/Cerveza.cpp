@@ -1,9 +1,10 @@
 #include <iostream>
 #include "Cerveza.h"
 using namespace std;
-Cerveza::Cerveza(float _porcentaje, float _precio, float _descuento, 
-    const string& _marca, const string& _pais, const string& _nombre,
-    string& _tipo, float _ibu) : Bebida(_porcentaje, _precio, _descuento, _marca, 
+Cerveza::Cerveza(int _stock, float _porcentaje, float _precio, 
+    float _descuento, const string& _marca, const string& _pais, 
+    const string& _nombre, const string& _tipo, float _ibu) 
+    : Bebida(_stock, _porcentaje, _precio, _descuento, _marca, 
         _pais, _nombre), tipo(_tipo), ibu(_ibu) {}
 
 void Cerveza::setTipo(string type){
@@ -33,7 +34,7 @@ void Cerveza::descontar(int cantidad){
         cout << "Venga chavaaaaaaal tomaste " << cantidad 
             << " te ganaste un 20'%' de descuento " << endl;
 
-        descuento = 0.20;                // porcentaje especial
-        Bebida::descontar(cantidad);     // usa el método del total
+        descuento = 0.20;
+        Bebida::descontar(cantidad);    
     }
 }

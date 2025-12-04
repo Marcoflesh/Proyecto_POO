@@ -3,11 +3,11 @@
 #include "Vodka.h"
 using namespace std;
 
-Vodka::Vodka(float _porcentaje, float _precio, float _descuento, 
+Vodka::Vodka(int _stock, float _porcentaje, float _precio, float _descuento, 
     const string& _marca, const string& _pais, const string& _nombre,
     const string& _sabor, int _destilaciones) 
-    : Bebida(_porcentaje, _precio, _descuento, _marca, _pais, _nombre), 
-    sabor(_sabor), destilaciones(_destilaciones) {}
+    : Bebida(_stock, _porcentaje, _precio, _descuento, _marca, 
+        _pais, _nombre), sabor(_sabor), destilaciones(_destilaciones) {}
 
 void Vodka::setSabor(string flavor){
     sabor = flavor;

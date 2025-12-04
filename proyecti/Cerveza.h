@@ -11,9 +11,9 @@ private:
     float ibu; // International Bitterness Units (mide el amargor)
 
 public:
-    Cerveza(float _porcentaje, float _precio, float _descuento, 
+    Cerveza(int stock, float _porcentaje, float _precio, float _descuento, 
         const string& _marca, const string& _pais, const string& _nombre,
-        string& _tipo, float _ibu);
+        const string& _tipo, float _ibu);
     
     virtual ~Cerveza(){}
     

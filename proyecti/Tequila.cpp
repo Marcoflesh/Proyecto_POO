@@ -2,10 +2,11 @@
 #include "Tequila.h"
 using namespace std;
 
-Tequila::Tequila(float _porcentaje, float _precio, float _descuento, 
-    const string& _marca, const string& _pais, const string& _nombre,
-    const string& _region, const string& _categoria, bool _agave) 
-    : Bebida(_porcentaje, _precio, _descuento, _marca, _pais, _nombre), 
+Tequila::Tequila(int _stock, float _porcentaje, float _precio, 
+    float _descuento, const string& _marca, const string& _pais, 
+    const string& _nombre, const string& _region, const string& _categoria, 
+    bool _agave) : Bebida(_stock, _porcentaje, _precio, _descuento, _marca, 
+        _pais, _nombre), 
     region(_region), categoria(_categoria), agave(_agave) {}
 
 void Tequila::setRegion(string region){
@@ -40,10 +41,10 @@ string Tequila::toString(){
 }
 
 void Tequila::descontar(int cantidad){
+    float total;
+    total = precio * cantidad;
     if (agave){
-        float total;
         cout << "no habrá descuento porque es 100'%' de agave" << endl;
-        total = precio * cantidad;
         cout << "Total: $" << total << endl;
     }
     else{
@@ -51,10 +52,8 @@ void Tequila::descontar(int cantidad){
             Bebida::descontar(cantidad);
         }
         else{
-            float total;
             cout << "Debes tomar más de 7 caballitos para que se te haga"
-            << "un descuento" << endl;
-            total = precio * cantidad;
+            << " un descuento" << endl;
             cout << "Total: $" << total << endl;
         }
     }

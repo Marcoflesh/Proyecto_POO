@@ -11,7 +11,7 @@ private:
     bool gusano;
 
 public:
-    Mezcal(float _porcentaje, float _precio, float _descuento, 
+    Mezcal(int _stock, float _porcentaje, float _precio, float _descuento, 
         const string& _marca, const string& _pais, const string& _nombre,
         const string& _tipoAgave, bool _gusano);
     

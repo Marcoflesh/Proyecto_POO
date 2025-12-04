@@ -11,7 +11,7 @@ private:
     bool agave;
 
 public:
-    Tequila(float _porcentaje, float _precio, float _descuento, 
+    Tequila(int _stock, float _porcentaje, float _precio, float _descuento, 
         const string& _marca, const string& _pais, const string& _nombre,
         const string& _region, const string& _categoria, bool _agave);
     
