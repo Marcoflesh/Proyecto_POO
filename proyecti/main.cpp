@@ -31,88 +31,88 @@ int main(){
     Licoreria bar("Marco's");
 
     {// Cervezas
-    bar.agregarBebida(new Cerveza(stock(), 4.5, 25.0, 0.05, "Corona", 
-        "México", "Corona Light", "Clara", 12));
-    bar.agregarBebida(new Cerveza(stock(), 5.0, 30.0, 0.05, "Modelo", 
-        "México", "Modelo Especial", "Pilsner", 18));
-    bar.agregarBebida(new Cerveza(stock(), 6.0, 40.0, 0.05, "Heineken", 
-        "Holanda", "Heineken", "Lager", 16));
-    bar.agregarBebida(new Cerveza(stock(), 4.2, 22.0, 0.05, "Budweiser", 
-        "USA", "Bud", "Lager", 10));
-    bar.agregarBebida(new Cerveza(stock(), 7.0, 45.0, 0.05, "Guinness", 
-        "Irlanda", "Guinness Draught", "Stout", 45));
+        bar.agregarBebida(new Cerveza(stock(), 4.5, 25.0, 0.05, "Corona", 
+            "México", "Corona Light", "Clara", 12));
+        bar.agregarBebida(new Cerveza(stock(), 5.0, 30.0, 0.05, "Modelo", 
+            "México", "Modelo Especial", "Pilsner", 18));
+        bar.agregarBebida(new Cerveza(stock(), 6.0, 40.0, 0.05, "Heineken", 
+            "Holanda", "Heineken", "Lager", 16));
+        bar.agregarBebida(new Cerveza(stock(), 4.2, 22.0, 0.05, "Budweiser", 
+            "USA", "Bud", "Lager", 10));
+        bar.agregarBebida(new Cerveza(stock(), 7.0, 45.0, 0.05, "Guinness", 
+            "Irlanda", "Guinness Draught", "Stout", 45));
     }
     {// Ron
-    bar.agregarBebida(new Ron(stock(), 38, 200, 0.10, "Bacardí", 
-        "Puerto Rico", "Bacardí Blanco", "Blanco", false));
-    bar.agregarBebida(new Ron(stock(), 40, 250, 0.10, "Havana Club", "Cuba", 
-        "Havana 7 años", "Añejo", false));
-    bar.agregarBebida(new Ron(stock(), 42, 300, 0.10, "Zacapa", "Guatemala", 
-        "Zacapa 23", "Gran Reserva", true));
-    bar.agregarBebida(new Ron(stock(), 37, 180, 0.10, "Brugal", 
-        "R. Dominicana", "Brugal XV", "Añejo", false));
-    bar.agregarBebida(new Ron(stock(), 35, 150, 0.10, "Appleton", "Jamaica", 
-        "Appleton Signature", "Dorado", false));
+        bar.agregarBebida(new Ron(stock(), 38, 200, 0.10, "Bacardí", 
+            "Puerto Rico", "Bacardí Blanco", "Blanco", false));
+        bar.agregarBebida(new Ron(stock(), 40, 250, 0.10, "Havana Club", "Cuba", 
+            "Havana 7 años", "Añejo", false));
+        bar.agregarBebida(new Ron(stock(), 42, 300, 0.10, "Zacapa", "Guatemala", 
+            "Zacapa 23", "Gran Reserva", true));
+        bar.agregarBebida(new Ron(stock(), 37, 180, 0.10, "Brugal", 
+            "R. Dominicana", "Brugal XV", "Añejo", false));
+        bar.agregarBebida(new Ron(stock(), 35, 150, 0.10, "Appleton", "Jamaica", 
+            "Appleton Signature", "Dorado", false));
     }
     {// Tequila
-    bar.agregarBebida(new Tequila(stock(), 38, 250, 0.05, "José Cuervo", 
-        "México", "Tradicional", "Jalisco", "Plata", false));
-    bar.agregarBebida(new Tequila(stock(), 40, 300, 0.05, "Don Julio", 
-        "México", "Don Julio Blanco", "Jalisco", "Blanco", true));
-    bar.agregarBebida(new Tequila(stock(), 38, 200, 0.05, "Cazadores", 
-        "México", "Cazadores Reposado", "Arandas", "Reposado", false));
-    bar.agregarBebida(new Tequila(stock(), 42, 450, 0.05, "Herradura", 
-        "México", "Herradura Ultra", "Amatitán", "Añejo", true));
-    bar.agregarBebida(new Tequila(stock(), 35, 180, 0.05, "Sauza", "México", 
-        "Hornitos", "Tequila", "Reposado", false));
+        bar.agregarBebida(new Tequila(stock(), 38, 250, 0.05, "José Cuervo", 
+            "México", "Tradicional", "Jalisco", "Plata", false));
+        bar.agregarBebida(new Tequila(stock(), 40, 300, 0.05, "Don Julio", 
+            "México", "Don Julio Blanco", "Jalisco", "Blanco", true));
+        bar.agregarBebida(new Tequila(stock(), 38, 200, 0.05, "Cazadores", 
+            "México", "Cazadores Reposado", "Arandas", "Reposado", false));
+        bar.agregarBebida(new Tequila(stock(), 42, 450, 0.05, "Herradura", 
+            "México", "Herradura Ultra", "Amatitán", "Añejo", true));
+        bar.agregarBebida(new Tequila(stock(), 35, 180, 0.05, "Sauza", "México", 
+            "Hornitos", "Tequila", "Reposado", false));
     }   
     {// Vodka
-    bar.agregarBebida(new Vodka(stock(), 40, 150, 0.03, "Absolut", "Suecia", 
-        "Absolut Blue", "Natural", 3));
-    bar.agregarBebida(new Vodka(stock(), 40, 180, 0.03, "Smirnoff", "USA", 
-        "Smirnoff Red", "Natural", 5));
-    bar.agregarBebida(new Vodka(stock(), 37, 160, 0.03, "Skyy", "USA", 
-        "Skyy Vodka", "Natural", 4));
-    bar.agregarBebida(new Vodka(stock(), 40, 220, 0.03, "Belvedere", 
-        "Polonia", "Belvedere Pure", "Premium", 6));
-    bar.agregarBebida(new Vodka(stock(), 40, 300, 0.03, "Grey Goose", 
-        "Francia", "Grey Goose", "Ultra Premium", 7));
+        bar.agregarBebida(new Vodka(stock(), 40, 150, 0.03, "Absolut", "Suecia", 
+            "Absolut Blue", "Natural", 3));
+        bar.agregarBebida(new Vodka(stock(), 40, 180, 0.03, "Smirnoff", "USA", 
+            "Smirnoff Red", "Natural", 5));
+        bar.agregarBebida(new Vodka(stock(), 37, 160, 0.03, "Skyy", "USA", 
+            "Skyy Vodka", "Natural", 4));
+        bar.agregarBebida(new Vodka(stock(), 40, 220, 0.03, "Belvedere", 
+            "Polonia", "Belvedere Pure", "Premium", 6));
+        bar.agregarBebida(new Vodka(stock(), 40, 300, 0.03, "Grey Goose", 
+            "Francia", "Grey Goose", "Ultra Premium", 7));
     }
     {// Whiskey
-    bar.agregarBebida(new Whiskey(stock(), 40, 350, 0.07, "Jack Daniels", 
-        "USA", "Old No.7", 4, "Roble"));
-    bar.agregarBebida(new Whiskey(stock(), 42, 500, 0.07, "Chivas", 
-        "Escocia", "Chivas 12", 12, "Roble Francés"));
-    bar.agregarBebida(new Whiskey(stock(), 45, 800, 0.07, "Macallan", 
-        "Escocia", "Macallan 18", 18, "Sherry Oak"));
-    bar.agregarBebida(new Whiskey(stock(), 43, 200, 0.07, "Jim Beam", "USA", 
-        "Jim Beam White", 4, "Bourbon"));
-    bar.agregarBebida(new Whiskey(stock(), 46, 1500, 0.07, "Yamazaki", 
-        "Japón", "Yamazaki 25", 25, "Mizunara"));
+        bar.agregarBebida(new Whiskey(stock(), 40, 350, 0.07, "Jack Daniels", 
+            "USA", "Old No.7", 4, "Roble"));
+        bar.agregarBebida(new Whiskey(stock(), 42, 500, 0.07, "Chivas", 
+            "Escocia", "Chivas 12", 12, "Roble Francés"));
+        bar.agregarBebida(new Whiskey(stock(), 45, 800, 0.07, "Macallan", 
+            "Escocia", "Macallan 18", 18, "Sherry Oak"));
+        bar.agregarBebida(new Whiskey(stock(), 43, 200, 0.07, "Jim Beam", "USA", 
+            "Jim Beam White", 4, "Bourbon"));
+        bar.agregarBebida(new Whiskey(stock(), 46, 1500, 0.07, "Yamazaki", 
+            "Japón", "Yamazaki 25", 25, "Mizunara"));
     }
     {// Mezcal
-    bar.agregarBebida(new Mezcal(stock(), 45, 350, 0.05, "400 Conejos", 
-        "México", "400 Conejos", "Espadín", false));
-    bar.agregarBebida(new Mezcal(stock(), 48, 500, 0.05, "Amores", "México", 
-        "Mezcal Amores", "Tobalá", false));
-    bar.agregarBebida(new Mezcal(stock(), 50, 700, 0.05, "Montelobos", 
-        "México", "Montelobos", "Cuishe", true));
-    bar.agregarBebida(new Mezcal(stock(), 52, 600, 0.05, "Ojo de Tigre", 
-        "México", "Tigre", "Jabalí", false));
-    bar.agregarBebida(new Mezcal(stock(), 40, 300, 0.05, "Brujo", "México", 
-        "Brujo", "Cenizo", false));
+        bar.agregarBebida(new Mezcal(stock(), 45, 350, 0.05, "400 Conejos", 
+            "México", "400 Conejos", "Espadín", false));
+        bar.agregarBebida(new Mezcal(stock(), 48, 500, 0.05, "Amores", "México", 
+            "Mezcal Amores", "Tobalá", false));
+        bar.agregarBebida(new Mezcal(stock(), 50, 700, 0.05, "Montelobos", 
+            "México", "Montelobos", "Cuishe", true));
+        bar.agregarBebida(new Mezcal(stock(), 52, 600, 0.05, "Ojo de Tigre", 
+            "México", "Tigre", "Jabalí", false));
+        bar.agregarBebida(new Mezcal(stock(), 40, 300, 0.05, "Brujo", "México", 
+            "Brujo", "Cenizo", false));
     }
     {// Vino
-    bar.agregarBebida(new Vino(stock(), 13, 200, 0.05, "Concha y Toro", 
-        "Chile", "Casillero", "Merlot", 2019));
-    bar.agregarBebida(new Vino(stock(), 14, 250, 0.05, "La Cetto", "México", 
-        "Nebiolo", "Nebiolo", 2018));
-    bar.agregarBebida(new Vino(stock(), 12.5, 300, 0.05, "Marqués", "España", 
-        "Rioja", "Tempranillo", 2016));
-    bar.agregarBebida(new Vino(stock(), 13.2, 180, 0.05, "Gato Negro", 
-        "Chile", "Cabernet", "Cabernet Sauvignon", 2020));
-    bar.agregarBebida(new Vino(stock(), 14.5, 400, 0.05, "Trapiche", 
-        "Argentina", "Malbec", "Malbec", 2017));
+        bar.agregarBebida(new Vino(stock(), 13, 200, 0.05, "Concha y Toro", 
+            "Chile", "Casillero", "Merlot", 2019));
+        bar.agregarBebida(new Vino(stock(), 14, 250, 0.05, "La Cetto", "México", 
+            "Nebiolo", "Nebiolo", 2018));
+        bar.agregarBebida(new Vino(stock(), 12.5, 300, 0.05, "Marqués", "España", 
+            "Rioja", "Tempranillo", 2016));
+        bar.agregarBebida(new Vino(stock(), 13.2, 180, 0.05, "Gato Negro", "Chile", 
+            "Cabernet", "Cabernet Sauvignon", 2020));
+        bar.agregarBebida(new Vino(stock(), 14.5, 400, 0.05, "Trapiche", 
+            "Argentina", "Malbec", "Malbec", 2017));
     }
 
     int opcion = 0;
@@ -275,6 +275,7 @@ int main(){
                     } break;
 
                     }
+
                 } break;
 
                 case 3: {
@@ -299,6 +300,7 @@ int main(){
 
                 case 5:
                     break;
+
                 }
 
             } while (option != 5);
@@ -311,6 +313,7 @@ int main(){
             int edad;
 
             cout << "Tu nombre ";
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
             getline(cin, nombre);
 
             cout << "\nTu edad: ";
@@ -321,19 +324,23 @@ int main(){
             int client_option = 0;
 
             do {
-                cout << "Que quieres hacer? \n" << endl;
+                cout << "\nQue quieres hacer? \n" << endl;
                 cout << "1. Tomar bebida" << endl;
                 cout << "2. Ver info" << endl;
-                cout << "3. Regresar" << endl;
+                cout << "3. Pagar cuenta" << endl;
+                cout << "4. Regresar" << endl;
                 cin >> client_option;
 
                 switch (client_option){
 
                 case 1: {
+                    bar.mostrarInventario();
                     int beverage, shot_count;
                     cout << "Número de bebida: ";
                     cin >> beverage;
-                    cout << "¿Cantidad de tragos?: ";
+                    cout << "Escogiste: " << endl;
+                    bar.mostrarBebida(beverage);
+                    cout << "cuantos tragos vas a tomar? ";
                     cin >> shot_count;
                     client.pedirBebida(bar, beverage, shot_count);
                 } break;
@@ -342,12 +349,33 @@ int main(){
                     client.mostrarInfo();
                     break;
 
-                case 3:
+                case 3: {
+                    if (client.getCuenta() <= 0){
+                        cout << "Estas libre de deudas hermano" << endl;
+                        break;
+                    }
+
+                    char op;
+                    do {
+                        cout << "Tu cuenta total es: $" << client.getCuenta()
+                        << endl;
+                        cout << "Deseas pagar? (Y/N) {si no pagas no sales}"
+                        << endl;
+                        cin >> op;
+
+                    }while (op != 'Y' && op != 'y');
+                    
+                    client.pagarCuenta();
+                    cout << " gracias por pagar hermano" << endl;
+
+                } break;
+
+                case 4:
                     break;
 
                 }
 
-            } while (client_option != 3);
+            } while (client_option != 4);
 
         } break;
 

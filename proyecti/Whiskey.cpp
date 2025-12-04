@@ -27,7 +27,7 @@ string Whiskey::toString(){
         + to_string(yearsAged) + "\nTipo de barrica: " + barrica;
     return texto;
 }
-void Whiskey::descontar(int cantidad){
+float Whiskey::descontar(int cantidad){
     if (yearsAged > 20){
         float total;
         cout << "Este whiskey es especial por ende no hay descuentos" << endl;

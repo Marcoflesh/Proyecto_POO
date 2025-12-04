@@ -38,35 +38,46 @@ void Bebida::sumarStock(int cantidad){
 
 void Bebida::restarStock(int loot) {
     stock -= loot;
+    if (stock < 0){
+        stock = 0;
+    }
 }
 
-void Bebida::descontar(){
+float Bebida::descontar(){
     float descontado, nuevo;
     descontado = precio * descuento;
     nuevo = precio - descontado;
+
     cout << "se aplicó un descuento a " << nombre << " del " 
     << (descuento * 100) << "%, el nuevo precio es: $" << nuevo << endl;
+
+    return nuevo;
 }
 
-void Bebida::descontar(float total){
+float Bebida::descontar(float total){
     float descontado, pago;
     descontado = total * descuento;
     pago = total - descontado;
+
     cout << "total sin descuento: $" << total << endl;
     cout << "Total a pagar con descuento: $" << pago << endl;
+
+    return pago;
 }
 
-void Bebida::descontar(int cantidad){
-    if (cantidad > 0){
-        float total;
-        total = precio * cantidad;
-        cout << "tomaste: " << cantidad << " de " << nombre 
-        << endl;
-        descontar(total);
+float Bebida::descontar(int cantidad){
+    if (cantidad <= 0){
+        cout << "Que vas a tomar? aire?" << endl;
+        return 0.0;
     }
-    else{
-        cout << "mmmmm toma no?" << endl;
-    }
+    float total, final;
+    total = precio * cantidad;
+    cout << "tomaste: " << cantidad << " de " << nombre << endl;
+
+    final = descontar(total);
+    restarStock(cantidad);
+
+    return final;
 }
 
 string Bebida::toString(){

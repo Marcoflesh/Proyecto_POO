@@ -1,22 +1,20 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include <cstdlib>
-#include <time.h>
 #include "Licoreria.h"
 using namespace std;
 
 Licoreria::Licoreria(string _nombre) : nombre(_nombre) {}
-
-void Licoreria::setNombre(string name){
-    nombre = name;
-}
 
 Licoreria::~Licoreria(){
     for (auto bebida : inventario){
         delete bebida;
     }
     inventario.clear();
+}
+
+void Licoreria::setNombre(string name){
+    nombre = name;
 }
 
 void Licoreria::agregarBebida(Bebida* bebida){
@@ -76,26 +74,8 @@ void Licoreria::servirBebida(int num_bebida){
         cout << "error, se petateo esto, escoge otro numero" << endl;
         return;
     }
-
-    if (inventario[num_bebida]->getStock() <= 0){
-        cout << "Srry pero ya no queda en stock esta bebida" << endl;
-        return;
-    }
-
-    inventario[num_bebida]->restarStock(1);
     inventario[num_bebida]->servir();
-
 }
-
-void Licoreria::cobrar(int num_bebida, int cantidad){
-    if (num_bebida < 0 || num_bebida >= inventario.size()){
-        cout << "error, se petateo esto, escoge otro numero" << endl;
-        return;
-    }
-
-    inventario[num_bebida]->descontar(cantidad);
-}
-
 void Licoreria::mostrarBebida(int num_bebida){
     if (num_bebida < 0 || num_bebida >= inventario.size()){
         cout << "error, se petateo esto, escoge otro numero" << endl;

@@ -38,9 +38,10 @@ public:
 
     void sumarStock(int cantidad);
     void restarStock(int loot);
-    virtual void descontar();
-    virtual void descontar(float total);
-    virtual void descontar(int cantidad);
+
+    virtual float descontar();
+    virtual float descontar(float total);
+    virtual float descontar(int cantidad);
 
     virtual void servir() = 0;
 

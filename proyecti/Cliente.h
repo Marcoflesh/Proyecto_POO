@@ -11,6 +11,7 @@ private:
     string nombre;
     int edad;
     int shots;
+    double cuenta;
 
 public:
     Cliente(const string& _nombre, int _edad);
@@ -20,6 +21,7 @@ public:
     string getNombre(){return nombre; }
     int getEdad(){return edad; }
     int getShots(){return shots; }
+    double getCuenta(){return cuenta; }
 
     void setNombre(string name);
     void setEdad(int age);
@@ -27,6 +29,7 @@ public:
     void pedirBebida(Licoreria& local, int num_bebida, int cantidad);
     void beberShot(int cantidad);
     void mostrarInfo();
+    void payCheck();
 };
 
 #endif
