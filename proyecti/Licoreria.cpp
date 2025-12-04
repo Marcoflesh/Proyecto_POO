@@ -36,6 +36,8 @@ void Licoreria::agregarStock(int num_bebida, int cantidad){
         return;
     }
 
+    inventario[num_bebida]->sumarStock(cantidad);
+
     cout << "se han agregado " << cantidad << " tragos a " 
     << inventario[num_bebida]->getNombre() << endl;
     cout << "Ahora hay: " << inventario[num_bebida]->getStock() << endl;

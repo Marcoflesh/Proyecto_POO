@@ -3,6 +3,7 @@
 #include <windows.h>
 #include <cstdlib>
 #include <ctime>
+#include <limits>
 
 #include "Licoreria.h"
 #include "Cliente.h"
@@ -148,21 +149,22 @@ int main(){
                     break;
 
                 case 2: {
-                    int tipo, loot, respuesta;
-                    string marca, pais, nombre;
+                    int tipo, loot;
+                    string marca, pais, nombre, respuesta;
                     float porcentaje, precio, descuento;
 
                     cout << "si quieres agregar una bebida"
-                    << " que ya está en stock presiona el no. 0"
+                    << " que ya está en stock escribe Y," 
+                    << " si quieres continuar escribe N"
                     << " y en el menu de admin teclea el no. 4" 
-                    << "para agregar correctamente la bebida," 
-                    << "sino, presiona cualquier boton cuando se te indique "
+                    << " para agregar correctamente la bebida," 
+                    << " sino, presiona cualquier boton cuando se te indique "
                     << endl;
 
                     cout << "ingresa solo numeros enteros porfa" << endl;
                     cin >> respuesta;
                     
-                    if (respuesta == 0){
+                    if (respuesta == "Y" || respuesta == "y"){
                         break;
                     }
 
@@ -170,7 +172,8 @@ int main(){
                     << "\n4.Vodka \n5.Whiskey \n6.Mezcal \n7.Vino \n";
                     cin >> tipo;
 
-                    cout << "Marca: " << endl; 
+                    cout << "Marca: " << endl;
+                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
                     getline(cin, marca);
                     cout << "País: " << endl;
                     getline(cin, pais);
@@ -190,8 +193,9 @@ int main(){
                     case 1: { // cerveza
                         string tipo_cerveza; 
                         float ibu;
-                        cout << "Tipo cerveza: " << endl; 
-                        getline(cin, tipo_cerveza);
+                        cout << "Tipo cerveza: (artesanal o comercial)" 
+                        << endl; 
+                        cin >> tipo_cerveza;
                         cout << "IBU: " << endl; 
                         cin >> ibu;
                         bar.agregarBebida(new Cerveza(loot, porcentaje, 
