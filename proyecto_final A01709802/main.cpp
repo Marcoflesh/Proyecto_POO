@@ -45,14 +45,14 @@ int main(){
     {// Ron
         bar.agregarBebida(new Ron(stock(), 38, 200, 0.10, "Bacardí", 
             "Puerto Rico", "Bacardí Blanco", "Blanco", false));
-        bar.agregarBebida(new Ron(stock(), 40, 250, 0.10, "Havana Club", "Cuba", 
-            "Havana 7 años", "Añejo", false));
-        bar.agregarBebida(new Ron(stock(), 42, 300, 0.10, "Zacapa", "Guatemala", 
-            "Zacapa 23", "Gran Reserva", true));
+        bar.agregarBebida(new Ron(stock(), 40, 250, 0.10, "Havana Club", 
+            "Cuba", "Havana 7 años", "Añejo", false));
+        bar.agregarBebida(new Ron(stock(), 42, 300, 0.10, "Zacapa", 
+            "Guatemala", "Zacapa 23", "Gran Reserva", true));
         bar.agregarBebida(new Ron(stock(), 37, 180, 0.10, "Brugal", 
             "R. Dominicana", "Brugal XV", "Añejo", false));
-        bar.agregarBebida(new Ron(stock(), 35, 150, 0.10, "Appleton", "Jamaica", 
-            "Appleton Signature", "Dorado", false));
+        bar.agregarBebida(new Ron(stock(), 35, 150, 0.10, "Appleton", 
+            "Jamaica", "Appleton Signature", "Dorado", false));
     }
     {// Tequila
         bar.agregarBebida(new Tequila(stock(), 38, 250, 0.05, "José Cuervo", 
@@ -63,12 +63,12 @@ int main(){
             "México", "Cazadores Reposado", "Arandas", "Reposado", false));
         bar.agregarBebida(new Tequila(stock(), 42, 450, 0.05, "Herradura", 
             "México", "Herradura Ultra", "Amatitán", "Añejo", true));
-        bar.agregarBebida(new Tequila(stock(), 35, 180, 0.05, "Sauza", "México", 
-            "Hornitos", "Tequila", "Reposado", false));
+        bar.agregarBebida(new Tequila(stock(), 35, 180, 0.05, "Sauza", 
+            "México", "Hornitos", "Tequila", "Reposado", false));
     }   
     {// Vodka
-        bar.agregarBebida(new Vodka(stock(), 40, 150, 0.03, "Absolut", "Suecia", 
-            "Absolut Blue", "Natural", 3));
+        bar.agregarBebida(new Vodka(stock(), 40, 150, 0.03, "Absolut", 
+            "Suecia", "Absolut Blue", "Natural", 3));
         bar.agregarBebida(new Vodka(stock(), 40, 180, 0.03, "Smirnoff", "USA", 
             "Smirnoff Red", "Natural", 5));
         bar.agregarBebida(new Vodka(stock(), 37, 160, 0.03, "Skyy", "USA", 
@@ -85,16 +85,16 @@ int main(){
             "Escocia", "Chivas 12", 12, "Roble Francés"));
         bar.agregarBebida(new Whiskey(stock(), 45, 800, 0.07, "Macallan", 
             "Escocia", "Macallan 18", 18, "Sherry Oak"));
-        bar.agregarBebida(new Whiskey(stock(), 43, 200, 0.07, "Jim Beam", "USA", 
-            "Jim Beam White", 4, "Bourbon"));
+        bar.agregarBebida(new Whiskey(stock(), 43, 200, 0.07, "Jim Beam", 
+            "USA", "Jim Beam White", 4, "Bourbon"));
         bar.agregarBebida(new Whiskey(stock(), 46, 1500, 0.07, "Yamazaki", 
             "Japón", "Yamazaki 25", 25, "Mizunara"));
     }
     {// Mezcal
         bar.agregarBebida(new Mezcal(stock(), 45, 350, 0.05, "400 Conejos", 
             "México", "400 Conejos", "Espadín", false));
-        bar.agregarBebida(new Mezcal(stock(), 48, 500, 0.05, "Amores", "México", 
-            "Mezcal Amores", "Tobalá", false));
+        bar.agregarBebida(new Mezcal(stock(), 48, 500, 0.05, "Amores", 
+            "México", "Mezcal Amores", "Tobalá", false));
         bar.agregarBebida(new Mezcal(stock(), 50, 700, 0.05, "Montelobos", 
             "México", "Montelobos", "Cuishe", true));
         bar.agregarBebida(new Mezcal(stock(), 52, 600, 0.05, "Ojo de Tigre", 
@@ -105,12 +105,12 @@ int main(){
     {// Vino
         bar.agregarBebida(new Vino(stock(), 13, 200, 0.05, "Concha y Toro", 
             "Chile", "Casillero", "Merlot", 2019));
-        bar.agregarBebida(new Vino(stock(), 14, 250, 0.05, "La Cetto", "México", 
-            "Nebiolo", "Nebiolo", 2018));
-        bar.agregarBebida(new Vino(stock(), 12.5, 300, 0.05, "Marqués", "España", 
-            "Rioja", "Tempranillo", 2016));
-        bar.agregarBebida(new Vino(stock(), 13.2, 180, 0.05, "Gato Negro", "Chile", 
-            "Cabernet", "Cabernet Sauvignon", 2020));
+        bar.agregarBebida(new Vino(stock(), 14, 250, 0.05, "La Cetto", 
+            "México", "Nebiolo", "Nebiolo", 2018));
+        bar.agregarBebida(new Vino(stock(), 12.5, 300, 0.05, "Marqués", 
+            "España", "Rioja", "Tempranillo", 2016));
+        bar.agregarBebida(new Vino(stock(), 13.2, 180, 0.05, "Gato Negro", 
+            "Chile", "Cabernet", "Cabernet Sauvignon", 2020));
         bar.agregarBebida(new Vino(stock(), 14.5, 400, 0.05, "Trapiche", 
             "Argentina", "Malbec", "Malbec", 2017));
     }
