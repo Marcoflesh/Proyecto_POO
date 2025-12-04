@@ -36,8 +36,8 @@ public:
     void setMarca(string brand);
     void setPais(string country);
 
-    void sumarStock(int cantidad){};
-    void restarStock(int loot){};
+    void sumarStock(int cantidad);
+    void restarStock(int loot);
     virtual void descontar();
     virtual void descontar(float total);
     virtual void descontar(int cantidad);
