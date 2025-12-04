@@ -1,5 +1,5 @@
-# TC.1033.302 — Proyecto  
-# La Taberna del Chaval
+# TC1033.302 — Proyecto  
+# La Taberna Marco's
 
 ### Marco Antonio Hernández Roque
 
