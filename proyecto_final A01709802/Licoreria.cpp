@@ -1,0 +1,103 @@
+#include <iostream>
+#include <vector>
+#include <string>
+#include "Licoreria.h"
+using namespace std;
+
+Licoreria::Licoreria(string _nombre) : nombre(_nombre) {}
+
+Licoreria::~Licoreria(){
+    for (auto bebida : inventario){
+        delete bebida;
+    }
+    inventario.clear();
+}
+
+void Licoreria::setNombre(string name){
+    nombre = name;
+}
+
+void Licoreria::agregarBebida(Bebida* bebida){
+    inventario.push_back(bebida);
+    cout << "Se agregó " << bebida->getNombre() << endl;
+}
+
+void Licoreria::agregarStock(int num_bebida, int cantidad){
+    if (num_bebida < 0){
+        cout << "mmm como que ingresaste un numero que no" << endl;
+        return;
+    }
+
+    if (cantidad <= 0){
+        cout << "como vas a agregar algo negativo o nada? estas loco?" 
+        << endl;
+        return;
+    }
+
+    inventario[num_bebida]->sumarStock(cantidad);
+
+    cout << "se han agregado " << cantidad << " tragos a " 
+    << inventario[num_bebida]->getNombre() << endl;
+    cout << "Ahora hay: " << inventario[num_bebida]->getStock() << endl;
+}
+
+void Licoreria::quitarBebida(int num_bebida){
+    if (num_bebida < 0){
+        cout << "que estas intentando quitar? " << endl;
+        return;
+    }
+    cout << "Quitando " << inventario[num_bebida]->getNombre() << endl;
+    
+    delete inventario[num_bebida];
+    inventario.erase(inventario.begin() + num_bebida);
+
+    cout << "Bebida eliminada correctamente " << endl;
+}
+
+void Licoreria::mostrarInventario(){
+    cout << "Tienes en inventario:" << endl;
+
+    if (inventario.empty()){
+        cout << "no hay bebidas" << endl;
+    }
+
+    for (int i = 0; i < inventario.size(); i++){
+        cout << i << ": "<< inventario[i]->getStock() 
+        << " tragos o botellas de : " 
+        << inventario[i]->getNombre() << " de la marca: " 
+        << inventario[i]->getMarca() << endl;
+    }
+}
+
+void Licoreria::servirBebida(int num_bebida){
+    if (num_bebida < 0 || num_bebida >= inventario.size()){
+        cout << "error, se petateo esto, escoge otro numero" << endl;
+        return;
+    }
+    inventario[num_bebida]->servir();
+}
+
+float Licoreria::cobrar(int num_bebida, int cantidad){
+    float pago;
+    if (num_bebida < 0 || num_bebida >= inventario.size()){
+        cout << "error, se petateo esto, escoge otro numero" << endl;
+        return 0.0;
+    }
+
+    if (cantidad > inventario[num_bebida]->getStock()){
+        cout << "no puedes tomar mas tragos de los que hay en stock" <<endl;
+        return 0.0;
+    }
+    pago = inventario[num_bebida]->descontar(cantidad);
+    cout << "total pago: " << pago << endl;
+    return pago;
+}
+
+void Licoreria::mostrarBebida(int num_bebida){
+    if (num_bebida < 0 || num_bebida >= inventario.size()){
+        cout << "error, se petateo esto, escoge otro numero" << endl;
+        return;
+    }
+    cout << "Info de la bebida:" << endl;
+    cout << inventario[num_bebida]->toString() << endl;
+}
