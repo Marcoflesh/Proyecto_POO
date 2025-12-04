@@ -17,7 +17,7 @@ El sistema cuenta con dos modos principales:
 
 - Cliente: puede revisar el inventario, seleccionar bebidas, tomar tragos, acumular cuenta y pagar su consumo antes de retirarse. El sistema valida la edad del cliente y descuenta el stock según la cantidad tomada, aplicando los descuentos correspondientes.
 
-Este proyecto fue realizado como parte del curso TC.1033.302 para practicar estructuras avanzadas de clases, gestión dinámica de memoria, validaciones y lógica de simulación.
+Este proyecto fue realizado como parte del curso TC1033.302 para practicar estructuras avanzadas de clases, gestión dinámica de memoria, validaciones y lógica de simulación.
 
 ---
 
