@@ -3,11 +3,18 @@
 #include "Bebida.h"
 #include <string>
 
+
+/**
+ * @brief Clase que representa un vino.
+ *
+ * Incluye tipo de uva y año de cosecha. Al no sobrescribir descontar(int),
+ * utiliza directamente la lógica de la clase base Bebida.
+ */
 class Vino : public Bebida{
 
 private:
-    string uva;
-    int yearCosecha;
+    string uva;         /**< Tipo de uva utilizada. */
+    int yearCosecha;    /**< Año de la cosecha. */
 
 public:
     Vino(int _stock, float _porcentaje, float _precio, float _descuento, 

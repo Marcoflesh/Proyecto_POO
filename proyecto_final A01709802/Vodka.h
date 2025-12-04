@@ -4,11 +4,18 @@
 #include "Bebida.h"
 using namespace std;
 
+/**
+ * @brief Clase que representa un vodka.
+ *
+ * Define atributos como sabor y número de destilaciones. 
+ * Las reglas de descuento se basan en la pureza y cantidad 
+ * de tragos tomados por el cliente.
+ */
 class Vodka : public Bebida{
 
 private:
-    string sabor;
-    int destilaciones;
+    string sabor;       /**< Sabor del vodka. */
+    int destilaciones;  /**< Número de destilaciones. */
 
 public:
     Vodka(int _stock, float _porcentaje, float _precio, float _descuento, 
@@ -25,6 +32,11 @@ public:
 
     void servir() override;
     string toString() override;
+    /**
+     * @brief Aplica descuentos según pureza y cantidad tomada.
+     * @param cantidad Número de tragos solicitados.
+     * @return Monto final a pagar.
+     */
     float descontar(int) override;
 };
 

@@ -5,29 +5,80 @@
 #include "Bebida.h"
 using namespace std;
 
+
+/**
+ * @brief Clase que representa la administración de la taberna.
+ *
+ * Gestiona el inventario de bebidas, incluyendo sus existencias,
+ * registro, eliminación, reabastecimiento y presentación al usuario.
+ * También procesa consumos y genera los montos a pagar por los clientes.
+ */
 class Licoreria {
 
 private:
-    vector<Bebida*> inventario;
-    string nombre;
+    vector<Bebida*> inventario;   /**< Bebidas disponibles. */
+    string nombre;                /**< Nombre de la taberna. */
 
 public:
-Licoreria(string _nombre);
 
-virtual ~Licoreria();
+    /**
+     * @brief Constructor de la clase Licoreria.
+     * @param _nombre Nombre del establecimiento.
+     */
+    Licoreria(string _nombre);
 
-string getNombre(){return nombre; }
-int getBebidasQty(){return inventario.size(); }
+    virtual ~Licoreria();
 
-void setNombre(string name);
+    string getNombre(){return nombre; }
+    int getBebidasQty(){return inventario.size(); }
 
-void agregarBebida(Bebida* bebida);
-void agregarStock(int num_bebida, int cantidad);
-void quitarBebida(int num_bebida);
-void mostrarInventario();
-void servirBebida(int num_bebida);
-float cobrar(int num_bebida, int cantidad);
-void mostrarBebida(int num_bebida);
+    void setNombre(string name);
+
+    /**
+     * @brief Agrega una nueva bebida al inventario.
+     * @param bebida Puntero al objeto de bebida por registrar.
+     */
+    void agregarBebida(Bebida* bebida);
+
+    /**
+     * @brief Aumenta el stock de una bebida existente.
+     * @param num_bebida Índice de la bebida a reabastecer.
+     * @param cantidad Cantidad a sumar.
+     */
+    void agregarStock(int num_bebida, int cantidad);
+
+    /**
+     * @brief Elimina una bebida completa del inventario.
+     * @param num_bebida Índice de la bebida a eliminar.
+     */
+    void quitarBebida(int num_bebida);
+
+    /**
+     * @brief Muestra el inventario general de la taberna.
+     */
+    void mostrarInventario();
+
+    /**
+     * @brief Sirve una bebida sin cobrar ni descontar stock.
+     * @param num_bebida Índice dentro del inventario.
+     */
+    void servirBebida(int num_bebida);
+
+
+    /**
+     * @brief Cobra un consumo de bebida y retorna el monto final.
+     * @param num_bebida Índice de la bebida dentro del inventario.
+     * @param cantidad Número de tragos solicitados.
+     * @return Monto final a pagar.
+     */
+    float cobrar(int num_bebida, int cantidad);
+
+
+    /**
+     * @brief Realiza la presentación visual de una bebida específica.
+     * @param num_bebida Índice de la bebida a mostrar.
+     */
+    void mostrarBebida(int num_bebida);
 };
 
 #endif

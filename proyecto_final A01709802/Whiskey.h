@@ -4,11 +4,18 @@
 #include <string>
 using namespace std;
 
+/**
+ * @brief Clase que representa un whiskey.
+ *
+ * Extiende Bebida agregando información sobre su tiempo de añejamiento
+ * y la barrica donde fue almacenado. Su descuento depende del nivel de
+ * añejamiento.
+ */
 class Whiskey : public Bebida{
 
 private:
-    int yearsAged; // esta en ingles por la ñ
-    string barrica;
+    int yearsAged;    /**< Años de añejamiento. */
+    string barrica;    /**< Tipo de barrica utilizada. */
 
 public:
     Whiskey(int _stock, float _porcentaje, float _precio, float _descuento, 
@@ -25,6 +32,12 @@ public:
 
     void servir() override;
     string toString() override;
+
+    /**
+     * @brief Aplica descuentos dependiendo de si el whiskey es de alto añejamiento.
+     * @param cantidad Cantidad tomada por el cliente.
+     * @return Monto final a pagar.
+     */
     float descontar(int) override;
 };
 #endif
